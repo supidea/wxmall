@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 .activity-list {
-  background-color: var(--box-color);
+  background-color: #fff;
   height: 200rpx;
   display: flex;
 }
@@ -99,7 +99,7 @@
   width: 200rpx;
   display: block;
   font-size: 32rpx;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   position: relative;
 }
 .special-item__good-tit::after{
@@ -115,7 +115,7 @@
 
 .special-item__good-price {
   font-size: 32rpx;
-  color: #a6344c;
+  color: var(--text-active-color);
   display: block;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
 }
