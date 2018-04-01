@@ -1,13 +1,93 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" style='height:415rpx'>
+  <block wx:for="{{banners}}" wx:key="unique">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style="width:750rpx;height:415rpx" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='activity-list'>
+  <view class='activity-list__item'>
+    <text class='activity-list__tit'>每日签到</text>
+    <image class='activity-list__img' src="/images/03.gif"></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='activity-list__item'>
+    <text class='activity-list__tit'>礼券领取</text>
+    <image class='activity-list__img' src="/images/05.gif"></image>
   </view>
+  <view class='activity-list__item'>
+    <text class='activity-list__tit'>严选专栏</text>
+    <image class='activity-list__img' src="/images/07.gif"></image>
+  </view>
+</view>
+<view class='special-tit'>
+  — 专题 —
+</view>
+<view class='special-item'>
+  <view class='special-item__hd'>
+    <image class='special-item__img' src='/images/09.jpg'></image>
+    <text class='special-item__type'>#好物推荐#</text>
+    <text class='special-item__tit'>千挑万选就是想给您最好的</text>
+  </view>
+  <scroll-view scroll-x="true" class='special-item__bd'>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+  </scroll-view>
+</view>
+<view class='special-item'>
+  <view class='special-item__hd'>
+    <image class='special-item__img' src='/images/09.jpg'></image>
+    <text class='special-item__type'>#好物推荐#</text>
+    <text class='special-item__tit'>千挑万选就是想给您最好的</text>
+  </view>
+  <scroll-view scroll-x="true" class='special-item__bd'>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+    <view class='special-item__good'>
+      <image class='special-item__good-img' src='/images/08.jpg'></image>
+      <text class='special-item__good-tit'>巧克力拍快防守对方身份</text>
+      <text class='special-item__good-price'>¥ 90.00</text>
+    </view>
+  </scroll-view>
 </view>
