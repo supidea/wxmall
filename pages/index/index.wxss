@@ -12,8 +12,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-right: 1rpx solid var(--border-color);
 }
-
+.activity-list__item:last-child{
+  border-right: 0 none;
+}
 .activity-list__tit {
   font-size: 32rpx;
 }
