@@ -95,12 +95,22 @@
 
 .special-item__good-tit {
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   width: 200rpx;
   display: block;
   font-size: 32rpx;
   margin-top: 30rpx;
+  position: relative;
+}
+.special-item__good-tit::after{
+  content: '';
+  display: block;
+  width: 2em;
+  background: linear-gradient(to left, #fff, transparent);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .special-item__good-price {
